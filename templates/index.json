@@ -1,0 +1,376 @@
+{
+  "sections": {
+    "2eccedb9-267e-45f2-94e4-38295fe6dc41": {
+      "type": "Hero-Section",
+      "blocks": {
+        "01c21316-8202-46a1-ad53-53fb4b59a6d1": {
+          "type": "image_picker",
+          "settings": {
+            "banner-image": "shopify:\/\/shop_images\/Bitmap_9a30f872-fd76-4ac8-8505-f56ddd690419.png",
+            "heading": "Enjoy Hookah!",
+            "paragraph": "<p>Lorem ipsum is a placeholder text commonly used to demon strate the visual form of a document or a typeface.<\/p>",
+            "btn-img": "shopify:\/\/shop_images\/Group_8354_a3d8e7a9-1ca3-4c3d-9293-191de0d0e2cc.png",
+            "link-btn": "shopify:\/\/collections\/krass-hookah"
+          }
+        },
+        "ae797db1-1a78-4a18-9288-f62292c0566b": {
+          "type": "image_picker",
+          "settings": {
+            "banner-image": "shopify:\/\/shop_images\/Bitmap_9a30f872-fd76-4ac8-8505-f56ddd690419.png",
+            "heading": "Enjoy Hookah!",
+            "paragraph": "<p>Lorem ipsum is a placeholder text commonly used to demon strate the visual form of a document or a typeface.<\/p>",
+            "btn-img": "shopify:\/\/shop_images\/Group_8354_a3d8e7a9-1ca3-4c3d-9293-191de0d0e2cc.png",
+            "link-btn": "shopify:\/\/collections\/krass-hookah"
+          }
+        }
+      },
+      "block_order": [
+        "01c21316-8202-46a1-ad53-53fb4b59a6d1",
+        "ae797db1-1a78-4a18-9288-f62292c0566b"
+      ],
+      "settings": {}
+    },
+    "f6965fd5-07b6-464a-9f02-f9c8caa90a67": {
+      "type": "Shisha-img",
+      "blocks": {
+        "77950bde-4b66-43a0-88f5-fcaaf2215392": {
+          "type": "image_picker",
+          "settings": {
+            "picker": "shopify:\/\/shop_images\/Screen_Shot_2021-12-02_at_2.59.42_PM.png",
+            "heading": "Shop the Latest Hookahs",
+            "picker1": "shopify:\/\/shop_images\/Group_8354_a3d8e7a9-1ca3-4c3d-9293-191de0d0e2cc.png"
+          }
+        },
+        "9f765260-71fb-446a-89de-655baf6c770c": {
+          "type": "image_picker",
+          "settings": {
+            "picker": "shopify:\/\/shop_images\/shisha-parts-with-fresh-cherry-close-up-photo.png",
+            "heading": "Best Shisha of 2021",
+            "picker1": "shopify:\/\/shop_images\/Group_8354_a3d8e7a9-1ca3-4c3d-9293-191de0d0e2cc.png"
+          }
+        }
+      },
+      "block_order": [
+        "77950bde-4b66-43a0-88f5-fcaaf2215392",
+        "9f765260-71fb-446a-89de-655baf6c770c"
+      ],
+      "settings": {}
+    },
+    "a3a9feaa-f7a6-4894-aff8-8e1f7ed31e55": {
+      "type": "Arrivals",
+      "blocks": {
+        "7bec3326-c66e-4e51-9558-f468deeb59c3": {
+          "type": "image_picker",
+          "settings": {
+            "Arrivalimage": "shopify:\/\/shop_images\/Group_16_0e216ade-54c0-4bce-9327-d7d16e2fe89c.png",
+            "Arriavalheading": "72 Amira Resin MOB Medusa Hookah Hose",
+            "Arrivaltext": "$4999"
+          }
+        },
+        "b4ed6d2a-b3f8-48cd-b417-250d6b9cd386": {
+          "type": "image_picker",
+          "settings": {
+            "Arrivalimage": "shopify:\/\/shop_images\/Group_16_fef4b04f-6c54-45c8-9b2c-7c32bb1c820d.png",
+            "Arriavalheading": "Starbuzz Shisha 250g Hookah Hose",
+            "Arrivaltext": "$7099"
+          }
+        },
+        "9acd622d-f317-445c-a612-79b41d9f661e": {
+          "type": "image_picker",
+          "settings": {
+            "Arrivalimage": "shopify:\/\/shop_images\/Group_16.png",
+            "Arriavalheading": "Nakhla Shisha Molasses Medusa Hookah 250g",
+            "Arrivaltext": "$2499"
+          }
+        },
+        "2a43fa04-4133-4a1b-9a93-1f6737d2f7b9": {
+          "type": "image_picker",
+          "settings": {
+            "Arrivalimage": "shopify:\/\/shop_images\/Group_16_0e216ade-54c0-4bce-9327-d7d16e2fe89c.png",
+            "Arriavalheading": "72 Amira Resin MOB Medusa Hookah Hose",
+            "Arrivaltext": "$3699"
+          }
+        }
+      },
+      "block_order": [
+        "7bec3326-c66e-4e51-9558-f468deeb59c3",
+        "b4ed6d2a-b3f8-48cd-b417-250d6b9cd386",
+        "9acd622d-f317-445c-a612-79b41d9f661e",
+        "2a43fa04-4133-4a1b-9a93-1f6737d2f7b9"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hookah-cut.png",
+        "paragraph1": "New Arrivals",
+        "paragraph2": "Shop all the latest in hookah essentials",
+        "paragraph3": "SHOP NEW ARRIVALS",
+        "link": "shopify:\/\/collections\/krass-hookah",
+        "linkcart": "shopify:\/\/pages\/mycart"
+      }
+    },
+    "ef0dd183-0e92-4735-8aa7-2c04fb7a292f": {
+      "type": "shop-by-Brand",
+      "blocks": {
+        "839002cd-5243-4134-b7a7-f40a0b7d982d": {
+          "type": "image_picker",
+          "settings": {
+            "img-pic": "shopify:\/\/shop_images\/starbuzz.png",
+            "img-name": "Starbuzz"
+          }
+        },
+        "783f7a91-44d6-43ba-a161-1da9a83d7f92": {
+          "type": "image_picker",
+          "settings": {
+            "img-pic": "shopify:\/\/shop_images\/mazaya.png",
+            "img-name": "Mazaya"
+          }
+        },
+        "b0866efa-8012-4df2-939b-f6bf5a292c92": {
+          "type": "image_picker",
+          "settings": {
+            "img-pic": "shopify:\/\/shop_images\/ath.png",
+            "img-name": "ATH"
+          }
+        },
+        "a0adb3d7-4041-4ee3-a14a-c77e659ecb82": {
+          "type": "image_picker",
+          "settings": {
+            "img-pic": "shopify:\/\/shop_images\/maya.png",
+            "img-name": "Mya Saray"
+          }
+        },
+        "c3bda992-22a6-4f50-89f0-2faeb50b9460": {
+          "type": "image_picker",
+          "settings": {
+            "img-pic": "shopify:\/\/shop_images\/LAVA_Logo.png",
+            "img-name": "Lava"
+          }
+        }
+      },
+      "block_order": [
+        "839002cd-5243-4134-b7a7-f40a0b7d982d",
+        "783f7a91-44d6-43ba-a161-1da9a83d7f92",
+        "b0866efa-8012-4df2-939b-f6bf5a292c92",
+        "a0adb3d7-4041-4ee3-a14a-c77e659ecb82",
+        "c3bda992-22a6-4f50-89f0-2faeb50b9460"
+      ],
+      "settings": {
+        "h-text": "Shop by Brands"
+      }
+    },
+    "2c233dfc-9667-4838-ab64-39fdf66a2628": {
+      "type": "Happy-Numbers",
+      "blocks": {
+        "9ca51477-218b-408f-82aa-0bcce23635d8": {
+          "type": "text",
+          "settings": {
+            "number": "1242",
+            "r-text": "<p>HAPPY CUSTOMERS<\/p>",
+            "radio": false
+          }
+        },
+        "8f931968-6852-4bad-bac2-a535de695cab": {
+          "type": "text",
+          "settings": {
+            "number": "15",
+            "r-text": "<p>YEARS IN BUSINESS<\/p>",
+            "radio": false
+          }
+        },
+        "47069be2-345e-4390-ba53-6db89d53d4af": {
+          "type": "text",
+          "settings": {
+            "number": "16",
+            "r-text": "<p>TOTAL ORDERS<\/p>",
+            "radio": true
+          }
+        },
+        "43bcb769-96c1-43ec-abdf-6159a1eb1028": {
+          "type": "text",
+          "settings": {
+            "number": "13",
+            "r-text": "<p>TOTAL BRANDS<\/p>",
+            "radio": false
+          }
+        }
+      },
+      "block_order": [
+        "9ca51477-218b-408f-82aa-0bcce23635d8",
+        "8f931968-6852-4bad-bac2-a535de695cab",
+        "47069be2-345e-4390-ba53-6db89d53d4af",
+        "43bcb769-96c1-43ec-abdf-6159a1eb1028"
+      ],
+      "settings": {
+        "custom": "shopify:\/\/shop_images\/Group_8787.png",
+        "k": "k"
+      }
+    },
+    "91e649ae-d40e-449a-8ac8-2993d3ab36a4": {
+      "type": "About-banner",
+      "settings": {
+        "image-section": "shopify:\/\/shop_images\/Group_8783.png",
+        "image-section-mobile": "shopify:\/\/shop_images\/smoking-kalian-berries.png",
+        "text-section": "About Hookah Supply",
+        "text-section2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
+        "image-section1": "shopify:\/\/shop_images\/Group_8354_a3d8e7a9-1ca3-4c3d-9293-191de0d0e2cc.png"
+      }
+    },
+    "5d8c2667-ba59-4361-aba5-5cf962d40bb3": {
+      "type": "Coals-image-section",
+      "blocks": {
+        "97e88d93-5f7c-40f4-9b2d-8ba4d5ddc28a": {
+          "type": "image_picker",
+          "settings": {
+            "Coals-img": "shopify:\/\/shop_images\/hot-red-coals-with-hookah-sparks-metal-bowl-shisha-smoking-traditional-asian-relaxation_2x_c0ecd3e6-e0f6-4e4d-bad8-829cf9f42603.png",
+            "Coals-img1": "shopify:\/\/shop_images\/Group_8769.png",
+            "img-name": "Long Lasting Coals",
+            "img-name1": "COALS"
+          }
+        },
+        "bec37343-b391-4e8b-b98b-7e8dd026bbe0": {
+          "type": "image_picker",
+          "settings": {
+            "Coals-img": "shopify:\/\/shop_images\/Group_660.png",
+            "Coals-img1": "shopify:\/\/shop_images\/Group_8768.png",
+            "img-name": "Shisha by Brand",
+            "img-name1": "SHISHA"
+          }
+        },
+        "c80e9854-a2ca-4659-ab8e-7cd8f205ac10": {
+          "type": "image_picker",
+          "settings": {
+            "Coals-img": "shopify:\/\/shop_images\/hookah-smoking_2x_ce7b1999-f6c4-4cd4-bb7d-b88fa247b7c0.png",
+            "Coals-img1": "shopify:\/\/shop_images\/Group_8767.png",
+            "img-name": "Packing Bowls",
+            "img-name1": "BOWLS"
+          }
+        },
+        "3054b015-d501-4304-be3b-61599f1b5b19": {
+          "type": "image_picker",
+          "settings": {
+            "Coals-img": "shopify:\/\/shop_images\/hookah-with-red-lamp_2x_6fd438bb-bff3-4b80-b69e-9f70d80c5b04.png",
+            "Coals-img1": "shopify:\/\/shop_images\/Group_8766_2x_a8f2e5dc-fca8-43bf-973f-a49e04d6ce4a.png",
+            "img-name": "All Hookah Accessories",
+            "img-name1": "ACCESSORIES"
+          }
+        }
+      },
+      "block_order": [
+        "97e88d93-5f7c-40f4-9b2d-8ba4d5ddc28a",
+        "bec37343-b391-4e8b-b98b-7e8dd026bbe0",
+        "c80e9854-a2ca-4659-ab8e-7cd8f205ac10",
+        "3054b015-d501-4304-be3b-61599f1b5b19"
+      ],
+      "settings": {}
+    },
+    "c65b7cb3-6b71-40a0-ac6a-a3fbbccd1e93": {
+      "type": "Shop-collection-sectionb",
+      "settings": {
+        "shop-txt": "Shop Best Sellers",
+        "collection-title": "hookha-shop-best-seller"
+      }
+    },
+    "516dad86-827f-47ba-90ca-5ad00fab0930": {
+      "type": "Our-Customerss",
+      "blocks": {
+        "60bd99a7-12a6-46d5-8225-cf55176c89fb": {
+          "type": "image_picker",
+          "settings": {
+            "customers-shop-text": "shopify:\/\/shop_images\/Mask_Group_2_f21f6c6c-bafa-4acc-a71a-250908f13d2e.png",
+            "customers-shop-img1": "Lorem ipsum is a placeholder text commonly used or demonstrate the visual form of a document or a istsa typeface without relying text commonly.",
+            "customers-shop-img-2": "Richard George",
+            "customers-shop-img-3": "Customers"
+          }
+        },
+        "cb2a10b6-cbce-42eb-b419-7921e4093ab3": {
+          "type": "image_picker",
+          "settings": {
+            "customers-shop-text": "shopify:\/\/shop_images\/Mask_Group_1_4e20b8b3-842c-4052-8bbe-3b254fc8a639.png",
+            "customers-shop-img1": "Lorem ipsum is a placeholder text commonly used or demonstrate the visual form of a document or a istsa typeface without relying text commonly.",
+            "customers-shop-img-2": "Sara Williams",
+            "customers-shop-img-3": "Customers"
+          }
+        },
+        "0fa6cd7d-3b23-4e8d-856d-97ff9e8b10a4": {
+          "type": "image_picker",
+          "settings": {
+            "customers-shop-text": "shopify:\/\/shop_images\/Mask_Group_2_f21f6c6c-bafa-4acc-a71a-250908f13d2e.png",
+            "customers-shop-img1": "Lorem ipsum is a placeholder text commonly used or demonstrate the visual form of a document or a istsa typeface without relying text commonly.",
+            "customers-shop-img-2": "Ethan",
+            "customers-shop-img-3": "Customers"
+          }
+        }
+      },
+      "block_order": [
+        "60bd99a7-12a6-46d5-8225-cf55176c89fb",
+        "cb2a10b6-cbce-42eb-b419-7921e4093ab3",
+        "0fa6cd7d-3b23-4e8d-856d-97ff9e8b10a4"
+      ],
+      "settings": {
+        "images": "shopify:\/\/shop_images\/Group_8785.png",
+        "customer-head": "What Our Customer are Saying"
+      }
+    },
+    "ccf0f310-de81-4512-8a04-07b7434aeb5d": {
+      "type": "Hookhas",
+      "settings": {
+        "heading": "shopify:\/\/shop_images\/Bitmap_12669d15-75b3-4d2b-8b2e-0de72c96ec3e.png",
+        "collection-hookha-slider": "hookha-shop-best-seller"
+      }
+    },
+    "5c93f86a-8db2-4437-b35d-374f56f1824a": {
+      "type": "blog-section-liquied",
+      "settings": {
+        "blog-text": "Latest News",
+        "blog_show_author": true,
+        "blogs": "kruss-hookha-blog",
+        "btn-text": "SEE MORE POSTS"
+      }
+    },
+    "c4bfdfe4-31e1-41d5-a8a3-05daafcc7265": {
+      "type": "hookahCollage",
+      "settings": {
+        "hookah-head": "@hookahsupply",
+        "img-1": "shopify:\/\/shop_images\/Bitmap_674dff6c-2638-4e53-84a8-634b9d9545f2.png",
+        "img-2": "shopify:\/\/shop_images\/Bitmap_Copy_79ce3a6a-8360-4b04-b998-a1ff66bb7d4e.png",
+        "img-3": "shopify:\/\/shop_images\/Bitmap_Copy_2_b2767353-d9f3-4719-84fc-2a3ccbb946a6.png",
+        "img-4": "shopify:\/\/shop_images\/Bitmap_Copy_3_0450285c-1bfa-4ff1-9a3e-b0f8c304b45b.png",
+        "img-5": "shopify:\/\/shop_images\/Bitmap_Copy_4_19dc8e98-f27a-493b-8393-a2734830b51a.png",
+        "img-6": "shopify:\/\/shop_images\/Bitmap_Copy_5_2ce1b5fc-dd8c-460e-bac2-5ee999e9e11a.png"
+      }
+    },
+    "1673789069cc4003ec": {
+      "type": "apps",
+      "blocks": {
+        "0eb58581-3634-4168-9be1-75025682cc7c": {
+          "type": "shopify:\/\/apps\/variant-option-product-options\/blocks\/block-homepage\/430cbd7b-bd20-4c16-ba41-db6f4c645164",
+          "settings": {
+            "product": "kaloud-samsaris-aluminium-bowl-medusa-hose",
+            "font_size": 20,
+            "font_color": "#e22120"
+          }
+        }
+      },
+      "block_order": [
+        "0eb58581-3634-4168-9be1-75025682cc7c"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "2eccedb9-267e-45f2-94e4-38295fe6dc41",
+    "f6965fd5-07b6-464a-9f02-f9c8caa90a67",
+    "a3a9feaa-f7a6-4894-aff8-8e1f7ed31e55",
+    "ef0dd183-0e92-4735-8aa7-2c04fb7a292f",
+    "2c233dfc-9667-4838-ab64-39fdf66a2628",
+    "91e649ae-d40e-449a-8ac8-2993d3ab36a4",
+    "5d8c2667-ba59-4361-aba5-5cf962d40bb3",
+    "c65b7cb3-6b71-40a0-ac6a-a3fbbccd1e93",
+    "516dad86-827f-47ba-90ca-5ad00fab0930",
+    "ccf0f310-de81-4512-8a04-07b7434aeb5d",
+    "5c93f86a-8db2-4437-b35d-374f56f1824a",
+    "c4bfdfe4-31e1-41d5-a8a3-05daafcc7265",
+    "1673789069cc4003ec"
+  ]
+}

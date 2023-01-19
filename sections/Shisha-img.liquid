@@ -1,0 +1,114 @@
+<div class="shisha">
+  <div class="container">
+    <div class="row section-shish">
+      {% for block in section.blocks %}
+        <div class="col-lg-6">
+          <div class="hookah">
+            <div class="hookah-img">
+              <img src="{{ block.settings.picker | img_url:'master' }}">
+            </div>
+            <div class="hookah-contain">
+              <h2>{{ block.settings.heading }}</h2>
+              <img src="{{ block.settings.picker1 | img_url:'master' }}">
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "shisha-section",
+  "blocks": [
+    {
+      "name": "block",
+      "type": "image_picker",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "picker",
+          "label": "add your image here"
+        }, {
+          "type": "text",
+          "id": "heading",
+          "label": "add your heading here"
+        },    {
+          "type": "image_picker",
+          "id": "picker1",
+          "label": "add your image here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "shisha-section",
+      "category": "index"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    .hookah-img {
+      position: relative;
+  }
+
+  .hookah-contain {
+      position: absolute;
+      top: 0;
+      max-width: 312px;
+      margin-left: 30px;
+  }
+
+  .hookah {
+      position: relative;
+  }
+
+  .hookah-contain h2 {
+      text-align: left;
+       font: normal normal normal 25px Titania;
+      letter-spacing: 0.8px;
+      color: #FFFFFF;
+      opacity: 1;
+      margin-top: 28px;
+      font-size: 38px;
+  }
+
+  .hookah-contain img {
+      max-width: 182px;
+    width:100%;
+  }
+  .section-shish {
+      padding: 40px;
+      padding-left: 0;
+      padding-right: 0;
+    padding-bottom:0;
+  }
+    .hookah-img img
+    {
+      width:100%;
+    }
+
+  @media screen and (max-width:999px)
+    {
+      .hookah {
+      position: relative;
+      margin-top: 10px;
+  }
+
+    }
+    @media screen and (max-width:470px)
+    {
+      .hookah-contain h2 {
+
+      font-size: 30px;
+  }
+      .hookah-contain img {
+      max-width: 118px;
+    width:100%;
+  }
+    }
+</style>

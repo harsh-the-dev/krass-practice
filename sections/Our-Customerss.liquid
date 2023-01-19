@@ -1,0 +1,207 @@
+<section class="Customer">
+  <div class="container-customers">
+    <p class="saying">{{ section.settings.customer-head }}</p>
+    <div class="container slir">
+       {% for block in section.blocks %}
+     
+          <div class="Customers">
+          
+               <p>{{ block.settings.customers-shop-img1}}</p> 
+            <div class="customers-section">
+              <img src="{{block.settings.customers-shop-text|img_url: 'medium'}}" alt="img">
+             <span><p>{{ block.settings.customers-shop-img-2}}</p> 
+              <p>{{ block.settings.customers-shop-img-3}}</p> </span>  
+            </div>
+          </div>
+  
+      
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+  </section>
+{% schema %}
+  {
+    "name": "customers",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"images",
+        "label":"Enter the image"
+      },
+      {
+        "type":"text",
+        "id":"customer-head",
+        "label":"add your heading here"
+      }
+    ],
+     "blocks": [
+      {
+        "name": "block",
+        "type": "image_picker",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "customers-shop-text",
+            "label": "put your image here"
+
+          }, 
+        
+          {
+            "type": "text",
+            "id": "customers-shop-img1",
+            "label": "add your name here"
+          },
+           {
+            "type": "text",
+            "id": "customers-shop-img-2",
+            "label": "add your name here"
+          },
+           {
+            "type": "text",
+            "id": "customers-shop-img-3",
+            "label": "add your name here"
+          }
+        ]
+      }
+    ],
+      "presets":[
+    {
+      "name":"Customers-slider",
+      "category":"paragraph"
+    }
+  ]
+  
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .Customers p 
+  {
+ 
+    text-overflow:ellipse;
+    white-space:no-wrap;
+  }
+  .slir
+  {
+      max-width: 1020px;
+  }
+  .container-customers 
+  {
+ background-image: url("https://cdn.shopify.com/s/files/1/0619/0039/0599/files/Group_8785_ffdae521-1830-4e32-bd25-7cf30a397997.png?v=1673351910");
+    height:550px;
+    background-size:cover;
+    background-position:center;
+  
+  }
+  .container-customers .saying {
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    padding-bottom: 10px;
+    margin-bottom:40px;
+}
+
+  @media(max-width:768px){
+    .container-customers .saying{
+      padding:0px 0px 0px 0px;
+    }
+    
+  }
+.Customers {
+    min-width: 450px;
+    background: white;
+    /* padding: 30px; */
+    margin: 20px;
+width:100%;
+    /* padding-left: 30px; */
+    padding: 10px;
+  padding-left:30px;
+}
+  .Customers p 
+  {
+    text-align: left;
+font: normal normal normal 15px/24px Kirvy;
+letter-spacing: 0.5px;
+color: #363637;
+opacity: 1;
+  }
+.container.slir.slick-initialized.slick-slider {
+  
+}
+  .saying 
+  {
+    text-align: center;
+font: normal normal normal 35px/42px Titania;
+letter-spacing: 0.7px;
+color: #FFFFFF;
+opacity: 1;
+    
+  }
+  .customers-section p
+  {
+    text-align: left;
+font: normal normal normal 15px/24px Kirvy;
+letter-spacing: 0.5px;
+color: #363637;
+opacity: 1;
+  }
+.customers-section {
+    display: flex;
+    align-items: center;
+}
+  .customers-section span p
+  {
+    margin-bottom:0;
+    margin-left:20px;
+  }
+  @media screen and (max-width:590px)
+  {
+    
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+<script>
+
+$('.slir').slick({
+  dots: false,
+  infinite: true,
+   arrows: false,
+
+  autoplay: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+          arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots:false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+          arrows: false,
+        slidesToShow: 1.2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.2,
+        slidesToScroll: 1
+      }
+    }
+
+  ]
+});
+</script>

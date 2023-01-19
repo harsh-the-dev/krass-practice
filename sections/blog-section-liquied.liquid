@@ -1,0 +1,146 @@
+<div class="blog text-center">
+  <div class="container">
+    <h1 class="blog-head">{{ section.settings.blog-text }}</h1>
+    <div class="row">
+      {% for article in section.settings.blogs.articles %}
+        <div class="col-lg-4">
+          <div class="blog-align">
+            <div class="img-box">
+              <img src="{{article.image | img_url: 'medium'}}" alt="blog-image"></div>
+            <div class="blog-text">
+              <p class="blog-date">{{ article.published_at | date: '%b %d %y' }}</p>
+
+              <h2 class="blog-title">{{ article.title }}</h2>
+
+              <p class="article-para">
+                {%- if article.excerpt.size > 0 -%}
+                  {{ article.excerpt }}
+                {%- else -%}
+                  {{ article.content | strip_html | truncate: 150 }}
+                {%- endif -%}
+              </p>
+              <a
+                class="read"
+                href="{{ article.url }}"
+                style="color:black;"
+                aria-label="Read more: {{ article.title }}">
+                Read more
+              </a>
+
+              {%- if blog.comments_enabled? and article.comments_count > 0 -%}
+                <li>
+                  <a href="{{ article.url }}#comments">
+                    {{ article.comments_count }}
+                  </a>
+                </li>
+              {%- endif -%}
+            </div>
+
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+    <button class="blog-btn">
+      <a href="{{section.settings.link-b}}">{{ section.settings.btn-text }}</a>
+    </button>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Blog pages",
+    "settings": [
+      {
+        "type": "text",
+        "id": "blog-text",
+        "label": "add your heading here"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_author",
+        "label": "Show author",
+        "default": true
+      },
+      {
+        "type": "blog",
+        "id": "blogs",
+        "label": "Show blogs"
+
+      },
+      {
+        "type": "text",
+        "id": "btn-text",
+        "label": "add your btn value here "
+      }, {
+        "type": "url",
+        "id": "link-b",
+        "label": "add your link here"
+      }
+    ],
+    "presets": [
+      {
+        "name": "blog-section",
+        "category": "paragraph"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .blog {
+    padding: 50px 0;
+  }
+  .blog .blog-head {
+    padding-bottom: 20px;
+    font-family: titania;
+  }
+  .blog-align {
+    padding: 10px 0;
+  }
+  .blog-align .img-box img {
+    width: 100%;
+  }
+  .blog-align p.blog-date {
+    padding: 5px 0;
+    margin: 0;
+    color: #929292;
+    font-size: 21px;
+    font-family: kirvy;
+    font: bold;
+  }
+
+  .blog-align h2.blog-title {
+    font-family: kirvy;
+    font-size: 21px;
+    padding-bottom: 5px;
+    margin: 0;
+  }
+
+  .blog-align p.article-para {
+    font-family: kirvy;
+    font-size: 14px;
+  }
+  .blog-align a.read {
+    font-family: kirvy;
+  }
+
+  button.blog-btn {
+    background-color: rgb(56, 55, 55);
+    color: #fff;
+    font-size: 14px;
+    font-family: kirvy;
+    border: none;
+    outline: 0;
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+
+  .blog-btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: kirvy;
+  }
+</style>

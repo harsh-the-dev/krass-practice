@@ -1,0 +1,149 @@
+<section class="Coals">
+  <div class=" fixedf">
+    {% for block in section.blocks %}
+      <div class="coals-row  ">
+        <div class="colas-column">
+          <img src="{{block.settings.Coals-img|img_url: 'medium'}}" alt="img">
+        </div>
+        <div class="relative-colas">
+          <p>{{ block.settings['img-name'] }}</p>
+          <img src="{{block.settings.Coals-img1|img_url: 'medium'}}" alt="img">
+          <h3>{{ block.settings['img-name1'] }}</h3>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Coals",
+  "settings": [
+
+
+  ],
+  "blocks": [
+    {
+      "name": "block",
+      "type": "image_picker",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "Coals-img",
+          "label": "put your image here"
+
+        },
+          {
+          "type": "image_picker",
+          "id": "Coals-img1",
+          "label": "put your image here"
+
+        },
+        {
+          "type": "text",
+          "id": "img-name",
+          "label": "add your name here"
+        },
+         {
+          "type": "text",
+          "id": "img-name1",
+          "label": "add your name here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coals",
+      "category": "shop"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .fixedf{
+      display: flex;
+      justify-content: space-around;
+    padding:20px 0;
+    padding-bottom:0;
+    flex-wrap:wrap;
+
+  }
+  .coals-row {
+      position: relative;
+  text-align: center;
+  }
+
+  .relative-colas {
+      position: absolute;
+      top: 40%;
+
+      width: 100%;
+      padding: 10px;
+    padding-left:0;
+    padding-right:0;
+  }
+
+  .relative-colas p {
+      /* visibility: hidden; */
+    display:none;
+      text-align: left;
+      font: normal normal normal 23px/29px Titania;
+      letter-spacing: 0.69px;
+      color: #FFFFFF;
+      opacity: 1;
+      max-width: 168px;
+  }
+  .relative-colas img
+    {
+      display:none;
+    }
+  .relative-colas h3 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      background: white;
+      padding: 10px;
+  }
+  .colas-column img {
+      width: 280px;
+      margin: 10px 0;
+  }
+    section.Coals {
+      background: #F9F9F9;
+  }
+  .relative-colas {}
+    @media screen and (max-width:650px)
+    {
+  .colas-column img
+      {
+        height:180px;
+        width:355px;
+      }
+  .relative-colas h3
+      {
+        display:none;
+      }
+    .relative-colas p {
+     display:block;
+  }
+
+      .relative-colas {
+      position: absolute;
+      top: 18px;
+      width: 100%;
+      padding: 10px 30px;
+
+
+  }
+      .relative-colas img
+      {
+        display:block;
+      }
+    }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

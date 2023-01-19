@@ -1,0 +1,22 @@
+{% comment %}
+  The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
+
+{% comment %} {% include 'nov-breadcrumb' %} {% endcomment %}
+
+<div class="page-width">
+    <div class="container">
+        <div class="row">
+          {% if settings.type_sidebar != 'sidebar_hidden' %}
+          <div class="sidebar sidebar-collection col-lg-3 col-md-4 flex-xs-unordered{% if settings.type_sidebar == 'sidebar_right' %} flex-last{% endif %}">
+         {% comment %} {% section 'nov-sidebar' %}{% endcomment %}
+          </div>
+          {% endif %}
+          <div class="{% if settings.type_sidebar != 'sidebar_hidden' %}col-lg-9 col-md-8 flex-xs-first{% else %}col-lg-12 col-md-12{% endif %}">
+{% comment %}             {% section 'collection-template' %} {% endcomment %}
+
+          </div>
+        </div>
+    </div>
+</div>
+{% section 'collection-spring' %}

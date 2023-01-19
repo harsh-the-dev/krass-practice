@@ -1,0 +1,150 @@
+<div class="container-banner">
+  {% for block in section.blocks %}
+    <div class="card-imgf">
+      <img src="{{ block.settings.banner-image | img_url: 'master'}}" alt="">
+      <div class="text-2">
+        <h2 class="heading-1" style="margin-bottom:0;">{{ block.settings.heading }}</h2>
+        <p class="para-1">{{ block.settings.paragraph }}</p>
+        <button class="btn-9" style="margin-bottom:0;">
+          <a href="{{block.settings.link-btn}}"> <img src="{{block.settings.btn-img | img_url: 'medium'}}" alt=""></a>
+        </button>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% schema %}
+{
+    "name": "Banner-section",
+    "blocks": [
+      {
+        "name": "block",
+        "type": "image_picker",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner-image",
+            "label": "add your image here"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "add your heading here"
+          },
+          {
+            "type":"richtext",
+            "id":"paragraph",
+            "label":"add your paragraph here"
+          },
+          {
+            "type":"image_picker",
+            "id":"btn-img",
+            "label":"add your btn-image here1"
+          },
+          {
+            "type": "url",
+            "id": "link-btn",
+            "label": "add your link here"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner-section",
+        "category": "index"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+    .card-imgf img
+    {
+      width:100%;
+    }
+  .para-1
+    {
+      color:black;
+    }
+    .card-imgf{position:relative;}
+    .text-2{position:absolute; top:40%; left:10%; color:#fff}
+    .text-2 h2.heading-1{ color:#fff; font: normal normal normal 57px/68px Titania;}
+    .text-2 p.para-1{font:normal normal normal 15px/26px Kirvy; color:black;}
+
+    @media(max-width:768px){
+
+    .card-imgf{position:relative; text-align:center; color:black;}
+    .text-2{position:unset;; top:20%; left:10%; color:#656565;}
+    .text-2 h2.heading-1 {
+      color: #000;
+      font: 20px Titania;
+      margin-top: 20px;
+  }
+    .text-2 p.para-1{font:normal normal normal 15px Kirvy; color:black; margin-bottom:0;}
+    .btn-9 img {width:60%;}
+    .btn-9{background:none; border:none; outline:0;}
+
+      @media(max-width:768px){
+        .btn-9 img{width:120%;}
+      }
+
+
+    .para-1
+      {
+        color:black;
+        font-family:kirvy;
+      }
+    button.slick-next.slick-arrow {
+         margin:20px;
+      display:none;
+  }
+      .para-1 p
+    {
+      margin-bottom:0;
+    }
+    }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+<script>
+  $('.container-banner').slick({
+    dots: false,
+    infinite: true,
+     arrows: false,
+
+    autoplay: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+            arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+            arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+
+    ]
+  });
+</script>

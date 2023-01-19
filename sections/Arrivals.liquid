@@ -1,0 +1,278 @@
+<section class="NewArrivals">
+  <div class="container">
+    <div class="NewArrivals-container-wrapper">
+      <div class="row resposnvives">
+        <div class="col-6  fixed">
+          <img src="{{ section.settings.image| img_url:'master' }}">
+          <h2>{{ section.settings.paragraph1 }}</h2>
+          <p>{{ section.settings.paragraph2 }}</p>
+          <button>{{ section.settings.paragraph3 }}</button>
+        </div>
+        <div class="col-6  fixed-section">
+          {% for block in section.blocks %}
+            <div class="Arrival-card col-3">
+              <div class="arri">
+                <img src="{{ block.settings.Arrivalimage  | img_url: 'medium'}}" alt="">
+
+                <p class="arrival-card-title">{{ block.settings.Arriavalheading }}</p>
+                <p class="price">{{ block.settings.Arrivaltext }}</p>
+              </div>
+              <div class="Add-to-cart">
+                <p class="arrival-c"><a href="{{section.settings.link}}">ADD TO CART</a></p>
+                <p class="arrival-s"><a href="{{section.settings.linkcart}}">QUICK SHOP</a></p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "NewArrivals",
+  "blocks": [
+    {
+      "name": "block",
+      "type": "image_picker",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "Arrivalimage",
+          "label": "add your image here"
+        }, {
+          "type": "text",
+          "id": "Arriavalheading",
+          "label": "add your heading here"
+        }, {
+          "type": "text",
+          "id": "Arrivaltext",
+          "label": "add para here"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+    "type":"image_picker",
+    "id":"image",
+    "label":"Enter the image"
+    },
+    {
+    "type":"text",
+    "id":"paragraph1",
+    "label":"Enter the text"
+    },
+      {
+    "type":"text",
+    "id":"paragraph2",
+    "label":"Enter the text"
+    },
+     {
+    "type":"text",
+    "id":"paragraph3",
+    "label":"Enter the text"
+    },
+    {
+      "type": "url",
+      "id":"link",
+      "label":"add your link here"
+    },
+    {
+      "type": "url",
+      "id":"linkcart",
+      "label":"add your link here"
+    }
+
+  ],
+
+  "presets": [
+    {
+      "name": "NewArrivals",
+      "category": "index"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+          section.NewArrivals
+          {
+            background: #F3F3F3;
+                padding: 50px;
+        }
+          .arrivals {
+            display: flex;
+        }
+
+          .col-6.fixed {
+            text-align: center;
+        }
+            .col-6.fixed  img {
+        max-width:502px;
+              width:100%;
+            }
+        .arri
+          {
+          background-color:white;
+          padding:10px;
+
+          }
+        .Arrival-card {
+            text-align: left;
+
+            width: 42%;
+            margin: 20px;
+        cursor:pointer;
+
+          height:300px;
+
+        }
+          .Arrival-card .arri .arrival-card-title
+          {
+          text-align: left;
+        font: normal normal normal 14px/20px Kirvy;
+        letter-spacing: 0.47px;
+        color: #363637;
+        opacity: 1;
+          }
+          .price
+          {
+            text-align: left;
+        font: normal normal bold 15px/21px Kirvy;
+        letter-spacing: 0.5px;
+        color: #363637;
+        opacity: 1;
+          }
+          .col-6.fixed-section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+          .fixed h2
+          {
+            text-align: center;
+        font: normal normal normal 35px/42px Titania;
+        letter-spacing: 0.7px;
+        color: #2C3031;
+        opacity: 1;
+          }
+           .arri img
+          {
+
+              display: block;
+            margin: 0 auto;
+          }
+            .fixed p
+          {
+            text-align: center;
+        font: normal normal bold 16px/25px Kirvy;
+        letter-spacing: 0.8px;
+        color: #2C3031;
+        opacity: 1;
+          }
+
+          .fixed button
+          {
+            text-align: center;
+        font: normal normal bold 14px/25px Kirvy;
+        letter-spacing: 0.28px;
+        color: #FFFFFF;
+        opacity: 1;
+            background-color:#2C3031;
+            padding: 10px;
+          }
+          .Add-to-cart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            display:none;
+
+        }
+        .Add-to-cart p:nth-child(1) {
+            background: #b97718;
+            /* padding-left: 27px; */
+            /* text-align: center; */
+            /* padding: 10px; */
+            width: 50%;
+            text-align: center;
+          color:white;
+          float: left;
+
+
+        }
+        .Add-to-cart p:nth-child(2) {
+            background:#363637;
+            /* padding-left: 27px; */
+            /* text-align: center; */
+            /* padding: 10px; */
+            width: 50%;
+            text-align: center;
+            color:white;
+          float: left;
+
+        }
+
+        @media(max-width:768px){
+          .Add-to-cart p:nth-child(2){padding:0px;}
+
+        }
+
+        .Add-to-cart p a
+          {
+          text-decoration: none;
+          color:white;
+          }
+          .Arrival-card:hover  .Add-to-cart
+          {
+            display:block;
+           transition-duration:.5s;
+          }
+        .arri
+          {
+          padding:10px;
+          /* width:240px; */
+          }
+
+          @media screen and (max-width:1202px)
+          {
+            .resposnvives
+          {
+            flex-direction:column;
+          }
+            .col-6.fixed-section
+            {
+              width:100%;
+              justify-content: center;
+
+            }
+            .col-6.fixed.col-6.fixed
+            {
+              width:100%;
+            }
+            .Arrival-card
+            {
+              width:unset;
+            }
+          .NewArrivals
+            {
+              margin-top:20px;
+            }
+          }
+          @media screen and (max-width:767px)
+          {
+            .Add-to-cart p a:nth-child(1) {
+
+            width: 100%;
+              margin-bottom:0;
+        }
+             .Add-to-cart p a:nth-child(2)
+            {
+
+         width: 100%;
+                margin-bottom:0;
+             }
+          }
+
+          p{margin:0;}
+{% endstylesheet %}

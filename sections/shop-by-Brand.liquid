@@ -1,0 +1,124 @@
+{{ 'font.css' | asset_url | stylesheet_tag }}
+{{ 'shop.css' | asset_url | stylesheet_tag }}
+
+<div class="boxes">
+  <div class="container text-center">
+    <h2 class="h-text">{{ section.settings['h-text'] }}</h2>
+    <div class="shop-section">
+      <div class="shop-section-loop">
+        {% for block in section.blocks %}
+          <div class="shop-section-images">
+            <div class="img-boxes">
+              <img src="{{block.settings.img-pic|img_url: 'medium'}}" alt="img">
+            </div>
+            <div class="img-text">
+              <p class="pp">{{ block.settings['img-name'] }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "shop",
+  "settings": [
+    {
+      "type": "text",
+      "id": "h-text",
+      "label": "submit your value here"
+    }
+
+  ],
+  "blocks": [
+    {
+      "name": "block",
+      "type": "image_picker",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img-pic",
+          "label": "put your image here"
+
+        }, {
+          "type": "text",
+          "id": "img-name",
+          "label": "add your name here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "shop",
+      "category": "shop"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .boxes {
+    padding: 100px 0;
+  }
+  .shop-section-loop {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h2.h-text {
+    font-family: titania;
+  }
+  p.pp {
+    font-family: kirvy;
+  }
+
+  .shop-section-images {
+    width: 20%;
+  }
+
+  .img-boxes img {
+    ;
+    /* background: red; */
+    /* border-radius: 50%; */
+    /* width: 100%; */
+    /* max-width: 387px; */
+    /* width: 100%; */
+  }
+
+  .img-boxes {
+    max-width: 238px;
+
+    height: 114px;
+    background: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px;
+    border-radius: 100%;
+  }
+
+     @media(max-width:768px){
+      .img-boxes{width:100%;
+                margin:0;}
+     }
+  .img-text p {
+    text-align: center;
+    font: normal normal bold 15px / 25px Kirvy;
+    letter-spacing: 0.3px;
+    color: #2C3031;
+    opacity: 1;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width:930px) {
+    .shop-section-loop {
+
+      flex-wrap: wrap;
+    }
+    .shop-section-images {
+      width: 33%;
+    }
+  }
+</style>

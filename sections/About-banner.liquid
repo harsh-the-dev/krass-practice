@@ -1,0 +1,151 @@
+<section class="banner-image">
+  <div class="banner-image-wrapper">
+    <img class="for-mobile-full-width" src="{{ section.settings.image-section-mobile|img_url:'master' }}">
+    <img class="full-width" src="{{ section.settings.image-section|img_url:'master' }}">
+
+    <div class="text-section">
+      <h2>{{ section.settings['text-section'] }}</h2>
+      <p>{{ section.settings['text-section2'] }}</p>
+      <img class="small-image" src="{{ section.settings.image-section1|img_url:'master' }}">
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "banner-section",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"image-section",
+      "label":"Enter the image"
+
+    },
+     {
+      "type":"image_picker",
+      "id":"image-section-mobile",
+      "label":"Enter the image"
+
+    },
+    {
+      "type":"text",
+      "id":"text-section",
+      "label":"Enter the text"
+    },
+     {
+      "type":"text",
+      "id":"text-section2",
+      "label":"Enter the text"
+    },
+       {
+      "type":"image_picker",
+      "id":"image-section1",
+      "label":"Enter the image"
+
+    }
+  ],
+    "presets":[
+  {
+    "name":"about-banner",
+    "category":"paragraph"
+  }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+    .banner-image-wrapper
+    {
+      position:relative;
+    }
+    .banner-image-wrapper .full-width {
+      width: 100%;
+      position:relative;
+  }
+    .banner-image-wrapper {
+      position: relative;
+  }
+    .text-section h2 {
+      text-align: left;
+      font: normal normal normal 35px/50px Titania;
+      letter-spacing: 0.7px;
+      color:white;
+      opacity: 1;
+  }
+    .text-section p {
+      text-align: left;
+      font: normal normal bold 14px/28px Kirvy;
+      letter-spacing: 0.28px;
+      color: white;
+      opacity: 1;
+  }
+    .text-section {
+      position: absolute;
+      top: 23%;
+      max-width: 493px;
+      width: 100%;
+      margin-left: 60px;
+  }
+    .for-mobile-full-width
+    {
+      width:100%;
+      display:none;
+    }
+    .full-width
+    {
+      display:block;
+    }
+    .text-section .small-image {
+      margin-top: 35px;
+  }
+
+    @media screen and (max-width:800px)
+    {
+
+      .text-section {
+      position: unset;
+      text-align: center;
+      background: black;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 59px;
+      /* white-space: nowrap; */
+      text-overflow: ellipsis;
+  }
+      .text-section h2
+  {
+    text-align:center;
+
+  }
+       .for-mobile-full-width
+    {
+
+      display:block;
+          background: black;
+    }
+      .for-mobile-full-width {
+      display: block;
+      background: black;
+  }
+      .text-section
+      {
+        padding-top:0;
+      }
+      .text-section p
+      {
+        text-align:center;
+      }
+    img.full-width {
+      display: none;
+  }
+    }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

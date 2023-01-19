@@ -1,0 +1,86 @@
+<section class="Hookhas-slider">
+  <div class="container">
+    <div class="Hookha-wrapper">
+      <div class="Hooka-image">
+        <img src="{{ section.settings.hooakha-image|img_url:'master' }}">
+      </div>
+      <div class="slider-hookha"> 
+        <div class="back-collection-wrap">
+{% for product in collections[section.settings.collection-1].products  %}
+<div class="back-collection-img">
+  <a href="{{ product.url }}"><img src="{{ product | img_url: 'master' }}"></a>
+  <a class="back-collection-img-title" href="{{ product.url }}">{{ product.title }}</a>
+  <p class="back-collection-pr">{{ product.price }}</p>
+</div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+  </div>
+  
+</section>
+{% schema %}
+  {
+    "name": "Hookha-slider",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"hooakha-image",
+        "label":"Enter the image"
+      },
+      {
+      "type":"collection",
+      "id":"collection-1",
+      "label":"Select the collection"
+      }
+    ],
+      "presets":[
+    {
+      "name":"Hookha-slider",
+      "category":"paragraph"
+    }
+  ]
+  }
+  
+{% endschema %}
+
+{% stylesheet %}
+  .Hooka-image {
+    width: 30%;
+}
+  .Hooka-image  img 
+  {
+    width:100%;
+  }
+
+  .slick-list.draggable {
+    display: flex;
+    overflow: hidden;
+}
+.slick-track {
+    display: flex;
+    align-items: center;
+}
+.slick-list.draggable {
+    overflow: hidden;
+}
+
+.slider-hookha {
+    width: 70%;
+    background: white;
+}
+  .Hookha-wrapper {
+    display: flex;
+    align-items: center;
+}
+section.Hookhas-slider {
+    background:#F3F3F3;  
+}
+{% endstylesheet %}
+
+{% javascript %}
+
+{% endjavascript %}
+<script>
+
+</script>

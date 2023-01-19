@@ -1,0 +1,345 @@
+</head>
+<body>
+  <section class="section-1">
+    <div class="contain-wrapper">
+      <img src="{{section.settings.collection-image|img_url: 'master'}}">
+    </div>
+  </section>
+
+
+  <section class="section-2">
+    <div class="container">
+      <div class="container-contain">
+
+        <div class="left-right">
+          <div class="back-collection-wrap">
+            {% for product in collections[section.settings.collection-spryng-section].products  %}
+              <div class="left">
+                <div class="product-image">
+                <a href="{{ product.url }}"><img src="{{ product | img_url: 'master' }}"></a>
+                </div>
+                <div class="left-image">
+                  <h2>
+                    <a class="back-collection-img-title" href="{{ product.url }}">{{ product.title }}</a>
+                  </h2>
+                  <p class="title">{{ product.description }}</p>
+                  <p class="price">{{ product.price|money_with_currency  }}</p>
+                  <form method="post" action="/cart/add">
+
+
+                    <input
+                      type="submit"
+                      value="Add to cart"
+                      class="btn" />
+
+                  </form>
+                </div>
+              </div>
+
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+      </div>
+      <h1 class="First-heading">Which Version Is Right For You?</h1>
+
+      <div class="section-wrapper">
+        {% for product in collections[section.settings.collection-spryng-section].products  %}
+          <div class="metafields-section">
+            <div class="metafields">
+                <div class="metafields-image">
+              <a  href="{{ product.url }}"><img class="image-size" src="{{ product | img_url: 'master' }}"></a></div>
+              <h2>
+                <a class="back-collection-img-title" href="{{ product.url }}">{{ product.title }}</a>
+              </h2>
+            </div>
+
+
+        </div>
+
+      {% endfor %}
+
+    </div>
+    <div class="metafields-wrap">
+      <div class="static-content">
+        <ul class="static-content-metafields">
+          <li class="color-metafield">PRESSURE RANGE (KPA)</li>
+           <li>INTENSITY LEVELS</li>
+           <li  class="color-metafield">PRESSURE PROFILES</li>
+          <li >CYCLE TIME </li>
+            <li class="color-metafield">USAGE TIME</li>
+            <li>NUMBER OF PUMPS</li>
+            <li class="color-metafield">NUMBER OF VALVES</li>
+            <li>COVERAGE</li>
+            <li class="color-metafield">SOFT GOODS</li>
+            <li>BATTERY USAGE</li>
+            <li class="color-metafield">POWER</li>
+            <li>CONNECTIVITY</li>
+            <li class="color-metafield">WARRANTY</li>
+            <li>FDA</li>
+            <li class="color-metafield">PRICE (USD)</li>
+            <li>USER COMFORT</li>
+
+            <li class="color-metafield">AFTER-CARE</li>
+           
+        </ul>
+
+      </div>
+    {% for product in collections[section.settings.collection-spryng-section].products  %}
+      <div class="spring-metafield">
+        <ul class="dynamic-metafield">
+          <li class="color-metafield">{{ product.metafields.custom.pressure_range_kpa_}}</li>
+             <li>{{ product.metafields.custom.intensity_levels }}</li>
+             <li  class="color-metafield">{{ product.metafields.custom.intensity_levels}}</li>
+          <li>{{ product.metafields.custom.cycle_time }}</li>
+          <li class="color-metafield" id="metafields-li">{{ product.metafields.custom.usage_time }}</li>
+        <li>{{product.metafields.custom.number_of_pumps  }}</li>
+            <li class="color-metafield">{{product.metafields.custom.number_of_valves  }}</li>
+            <li>{{ product.metafields.custom.coverage }}</li>
+            <li class="color-metafield">{{product.metafields.custom.soft_goods  }}</li>
+            <li>{{ product.metafields.custom.battery_usage }}</li>
+            <li class="color-metafield">{{product.metafields.custom.power  }}</li>
+            <li>{{ product.metafields.custom.connectivity }}</li>
+            <li class="color-metafield">{{product.metafields.custom.warranty  }}</li>
+            <li>{{ product.metafields.custom.fda }}</li>
+            <li class="color-metafield">{{ product.metafields.custom.price_usd_ }}</li>
+            <li>{{ product.metafields.custom.user_comfort }}</li>
+
+            <li class="color-metafield">{{ product.metafields.custom.after_care }}</li>
+   
+          
+        </ul>
+
+      </div>
+      {%  endfor %}
+    </div>
+  </section>
+
+
+
+  <style>
+  
+    .metafields-wrap .static-content .static-content-metafields li
+    {
+      font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+min-height:50px;
+letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+
+
+      padding-left:10px;
+color: #000000;
+    }
+    .static-content-metafields 
+    {
+      padding-left:0;
+    }
+    .spring-metafield .dynamic-metafield li 
+    {
+  
+ 
+
+    display: flex;
+    align-items: center;
+justify-content:center;
+      font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+text-align: center;
+letter-spacing: 0.01em;
+min-height:50px;
+color: #000000;
+ 
+    }
+.color-metafield 
+    {
+      width:100%;
+      background:#F9F9F9;
+    }
+    ul 
+    {
+      list-style:none;
+      margin-bottom:0;
+    }
+        .spring-metafield {
+    max-width: 40%;
+    text-align: center;
+          width:100%;
+              border-left: 1px solid #f8f8f8;
+         
+}
+    .static-content {
+    max-width: 20%;
+      text-align:left;
+      width:100%
+        
+}
+    ul.dynamic-metafield {
+    padding-left: 0;
+}
+ .metafields-wrap {
+    display: flex;
+    border: 1px solid #f8f8f8;
+}
+    .section-wrapper {
+        display: flex;
+        justify-content: end;
+        position: relative;
+    }
+    .contain-wrapper img {
+      width: 100%;
+    }
+    .metafields-section {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      /* justify-content: end; */
+      width: 40%;
+    }
+    .metafields-section .metafields {
+        width: 100%;
+        text-align: center;
+        border: 1px solid #f6f6f6;
+        height: 298px;
+        padding-top: 48px;
+        position: relative;
+    }
+
+
+
+    /* .left-right:hover {
+border: 1px solid red;
+} */
+    .back-collection-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+    .metafields-section .metafields a img:nth-child(1) {
+        /* max-width: 70px; */
+        /* width: 100%; */
+        max-width: 100%;
+        height: auto;
+        height: 160px;
+        margin-bottom: 20px;
+    }
+    .metafields-section .metafields h2 a {
+      margin-top: 10px;
+    }
+
+    .left-image h2 {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 26px;
+      /* identical to box height, or 108% */
+
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+
+      color: #000000;
+    }
+
+    .left-image .title {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height, or 125% */
+
+      letter-spacing: 0.04em;
+
+      color: #000000;
+    }
+    .left-image .btn {
+      margin-top: 20px;
+      max-width: 180px;
+      width: 100%;
+    }
+    .left-image .price {
+
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 10px;
+      /* identical to box height, or 100% */
+
+      letter-spacing: 0.04em;
+
+      color: #000000;
+
+    }
+a
+    {
+      color:black;
+      text-decoration:none;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      background: url('https://cdn.shopify.com/s/files/1/0053/0815/3926/files/Rectangle_551.png?v=1673867070'), url('https://cdn.shopify.com/s/files/1/0053/0815/3926/files/Rectangle_722_1.png?v=1673867076');
+      background-color: RGBA(245, 245, 245, 1);
+      width: 48%;
+      justify-content: space-evenly;
+      padding: 70px;
+      margin-top: 40px;
+    }
+    .First-heading::after {
+      content: '';
+      /* border: 1px solid; */
+      border: 1px solid red;
+      display: block;
+      width: 243px;
+      margin: 15px auto 0;
+    }
+    .First-heading {
+
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      /* identical to box height */
+      text-align: center;
+      letter-spacing: 0.01em;
+      margin-top: 62px;
+      color: #000000;
+
+    }
+  </style>
+
+  {% schema %}
+    {
+      "name": "paragraph-2",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "collection-image",
+          "label": "Enter the collection"
+        }, {
+          "type": "collection",
+          "id": "collection-spryng-section",
+          "label": "Selec the collection"
+        }
+      ]
+
+
+    }
+  {% endschema %}

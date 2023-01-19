@@ -1,0 +1,171 @@
+{{ 'font.css' | asset_url | stylesheet_tag }}
+
+<div class="box-1">
+  <div class="container">
+    <div class="row">
+      {% for block in section.blocks %}
+        <div class="col-3">
+          <div class="b-text">
+            <div class="content">
+              <h2 class="happy" data-val="{{ block.settings.number }}">
+                {{ block.settings.number -}}
+                {%- if block.settings.radio -%}
+                  K
+                {% endif %}
+              </h2>
+              <p class="para">{{ block.settings['r-text'] }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "customers",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "custom",
+        "label": "background image"
+      }, {
+        "type": "text",
+        "id": "k",
+        "label": "put the value k here"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "custom",
+        "type": "text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "number",
+            "label": "enter the number here"
+          }, {
+            "type": "richtext",
+            "id": "r-text",
+            "label": "enter the value here"
+          }, {
+            "type": "checkbox",
+            "id": "radio",
+            "default": true,
+            "label": "Add K"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "customer",
+        "category": "home"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .box-1 {
+    background-image: url('{{section.settings.custom | img_url: 'medium'}}');
+    height: 228px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    padding: 0;
+  }
+
+  .box-1 .col-3 {
+    border-right: solid 1px #fff;
+    margin-top: 74px;
+  }
+
+  .col-3:last-child {
+    border: none;
+  }
+
+  .box-1 .b-text {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+  }
+
+
+
+  .box-1 .b-text .content h2.happy {
+    color: #fff;
+    font-size: 54px;
+    font-family: titania
+  }
+
+  @media(max-width:768px) {
+
+    .box-1 .b-text .content h2.happy {
+      font-size: 20px;
+    }
+    .box-1 .col-3 {
+      border: none;
+    }
+
+
+  }
+
+
+
+  p.para {
+    font-size: 25px;
+    font-family: kirvy;
+  }
+}
+</style>
+
+<script>
+
+
+
+  // let valueDisplay = document.querySelectorAll("h2.happy");
+// let interval = 5000;
+
+// console.log(valueDisplay)
+
+// valueDisplay.forEach((valueDisplay) => {
+// let startvalue = 0;
+// let endvalue = parseInt(valueDisplay.getAttribute("data-val"));
+// console.log(endvalue);
+// let duration = Math.floor(interval/endvalue);
+// let counter = setInterval(function() {
+// startvalue += 1;
+// valueDisplay.textContent = startvalue;
+// })
+//    })
+
+  const counters = document.querySelectorAll("h2.happy");
+
+  counters.forEach((counter) => {
+    counter.innerText = '0';
+
+    const updatecounter = () => {
+      const target = + counter.getAttribute('data-val')
+
+// console.log(typeof target, target)
+      const c = + counter.innerText;
+      const increment = target / 200;
+      if (c < target) {
+        counter.innerText = `${
+          Math.ceil(c + increment)
+        }`;
+        setTimeout(updatecounter, 1);
+      } else {
+        counter.innerText = target;
+      }
+      console.log(increment)
+    };
+    updatecounter();
+
+  })
+</script>

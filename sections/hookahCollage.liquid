@@ -1,0 +1,107 @@
+<div class="container text-center border-line">
+  <h2 class="head-1">{{ section.settings.hookah-head }}</h2>
+  <div class="supply">
+    <div class="row">
+      <div class="col-4">
+        <div class="img-1">
+          <img src="{{section.settings.img-1 | img_url: 'master'}}" alt="1">
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="collage">
+          <div class="col-6">
+            <img src="{{section.settings.img-2  | img_url: 'medium'}}" alt="">
+          </div>
+          <div class="col-6">
+            <img src="{{section.settings.img-3  | img_url: 'medium'}}" alt=""></div>
+          <div class="col-4">
+            <img src="{{section.settings.img-4  | img_url: 'medium'}}" alt=""></div>
+          <div class="col-4">
+            <img src="{{section.settings.img-5  | img_url: 'medium'}}" alt=""></div>
+          <div class="col-4">
+            <img src="{{section.settings.img-6  | img_url: 'medium'}}" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "hookah-supply",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hookah-head",
+        "label": "put your head text here"
+      },
+      {
+        "type": "image_picker",
+        "id": "img-1",
+        "label": "select your image"
+      },
+      {
+        "type": "image_picker",
+        "id": "img-2",
+        "label": "select your image"
+      },
+      {
+        "type": "image_picker",
+        "id": "img-3",
+        "label": "select your image"
+      }, {
+        "type": "image_picker",
+        "id": "img-4",
+        "label": "select your image"
+      }, {
+        "type": "image_picker",
+        "id": "img-5",
+        "label": "select your image"
+      }, {
+        "type": "image_picker",
+        "id": "img-6",
+        "label": "select your image"
+      }
+
+    ],
+
+    "presets": [
+      {
+        "name": "hookah-supply",
+        "category": "hookah-supply"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .collage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .collage img {
+    width: 98%;
+    margin: 5px 0;
+  }
+
+  .img-1 {
+    height: 100%;
+  }
+  .img-1 img {
+    width: 100%;
+    height: 100% !important;
+  }
+
+  .head-1 {
+    font-size: 35px;
+    padding: 20px 0;
+    font-family: titania;
+  }
+
+
+  .border-line {
+    text-align: center!important;
+    border-top: 1px solid #dedada;
+}
+</style>
